@@ -728,6 +728,12 @@ service Cassandra {
             2:UnavailableException ue,
             3:TimedOutException te,
             4:SchemaDisagreementException sde)
+
+  CqlResult execute_cql3_query(1:required binary query, 2:required Compression compression, 3:required ConsistencyLevel consistency)
+    throws (1:InvalidRequestException ire,
+            2:UnavailableException ue,
+            3:TimedOutException te,
+            4:SchemaDisagreementException sde)
             
             
   /**
